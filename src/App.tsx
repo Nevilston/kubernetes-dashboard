@@ -4,6 +4,7 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "./theme";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
+import PodsView from "./pages/PodsView"; // Import PodsView
 
 const App: React.FC = () => {
   return (
@@ -12,10 +13,7 @@ const App: React.FC = () => {
       <Router>
         <Routes>
           <Route path="/" element={<DashboardPage />} />
-          {/* <Route path="/pods" element={<PodsPage />} />
-          <Route path="/nodes" element={<NodesPage />} />
-          <Route path="/deployments" element={<DeploymentsPage />} />
-          <Route path="/cost-optimization" element={<CostOptimizationPage />} /> */}
+          <Route path="/pods" element={<PodsView />} /> {/* Added PodsView Route */}
         </Routes>
       </Router>
     </ThemeProvider>
